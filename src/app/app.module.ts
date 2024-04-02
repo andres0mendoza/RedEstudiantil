@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PerfilComponent } from './perfil/perfil.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrarUsuarioComponent,
-    PerfilComponent
+    PerfilComponent,
+    InicioComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
