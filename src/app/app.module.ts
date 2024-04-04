@@ -7,7 +7,8 @@ import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PerfilComponent } from './perfil/perfil.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { MainComponent } from './main/main.component';
+import { MenuComponent } from './menu/menu.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MainComponent } from './main/main.component';
     RegistrarUsuarioComponent,
     PerfilComponent,
     InicioComponent,
-    MainComponent
+    MenuComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
