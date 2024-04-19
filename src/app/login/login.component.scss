@@ -1,0 +1,121 @@
+
+$primary-color: #38D688;
+$secondary-color: #0D5FBD;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;   
+    font-family: 'Bodoni MT';
+    padding: 80px;
+}
+
+.cotainer {
+
+    min-height: calc(100vh - 40px * 2);
+    display: grid; 
+    grid-template-columns: 50% 50%;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #3030303f;
+    margin: 40px;
+
+  }
+
+  .login-left{
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: content;
+    padding-left: 120px;
+    padding-right: 120px;
+    background-color: white;
+  }
+
+  .login-right{
+    grid-column: 2 / 3;
+    background: linear-gradient(135deg, #38D688, #0D5FBD);
+    display: flex;
+    justify-content: center;
+    margin-top: -80px;
+  }
+
+  /*logo y login*/
+
+  .login-header{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: -50px;
+    h1{
+      font-size: 60px;
+      margin-bottom: 50px;
+      margin-top: 100px;
+      margin-left: 300px;
+    }
+  }
+
+  .loginForm{
+
+        width: 450px;
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        &-footer{
+            display: flex;
+            gap: 30px;
+            margin-top: 70px;/*bien*/
+        }
+  }
+
+  .form-item label:not(.checkbocLabel){
+    display: inline-block;
+    
+  }
+
+  .form-control{
+    background-color: #F1F6F9;
+    border: none;
+    height: 55px;
+    padding: 0 2rem;
+    width: 100%;
+    outline: none;
+    transition: background .5s;/*bien*/
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+  }
+
+  .btn-primary{
+    border: none;
+    background: #02EAA8;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    height: 55px;
+    width: 150px;
+    margin: 20px;
+  }
+
+
+  .login-form-footer{
+    
+    .nav-link{
+      margin-top: 150px;
+      font-size: 18px;
+      margin-left: -90px;
+      color: #0D5FBD;
+    }
+    
+  }
+
