@@ -1,162 +1,26 @@
 
 <div style="margin-left: 200px;"> <!-- Agrega margen izquierdo para evitar la superposición del contenido -->
   <app-menu></app-menu>
-  <!-- Aquí puedes agregar el resto de tu contenido -->
-
   
-<div class="container px-4 py-5" id="featured-3">
-  <h2 class="pb-2 border-bottom">Red Estudiantil Polijic</h2>
-  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+<div class="container"  *ngFor="let itemNew of newsJson; let indice = index">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <div class="card">
+        <div class="card-header">
+          {{ itemNew.name }}
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>{{ itemNew.description }}</p>
+            <footer class="blockquote-footer"><cite title="Source Title">{{ itemNew.user }}</cite></footer>
+          </blockquote>
+          <img src="../foto.jpg" class="card-img-top">
+        </div>
       </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 1</h3>
-      <p>Descripción de la noticia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum tortor a leo consectetur, ut consequat massa efficitur.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
     </div>
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
-      </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 2</h3>
-      <p>Descripción de la noticia 2. Ut vel tellus id neque scelerisque vulputate. Fusce non dui quis magna tincidunt dignissim.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
-    </div>
-  </div>
-
-  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
-      </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 1</h3>
-      <p>Descripción de la noticia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum tortor a leo consectetur, ut consequat massa efficitur.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
-    </div>
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
-      </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 2</h3>
-      <p>Descripción de la noticia 2. Ut vel tellus id neque scelerisque vulputate. Fusce non dui quis magna tincidunt dignissim.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
-    </div>
-  </div>
-
-  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
-      </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 1</h3>
-      <p>Descripción de la noticia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum tortor a leo consectetur, ut consequat massa efficitur.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
-    </div>
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
-      </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 2</h3>
-      <p>Descripción de la noticia 2. Ut vel tellus id neque scelerisque vulputate. Fusce non dui quis magna tincidunt dignissim.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
-    </div>
-  </div>
-
-  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
-      </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 1</h3>
-      <p>Descripción de la noticia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum tortor a leo consectetur, ut consequat massa efficitur.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
-    </div>
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
-      </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 2</h3>
-      <p>Descripción de la noticia 2. Ut vel tellus id neque scelerisque vulputate. Fusce non dui quis magna tincidunt dignissim.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
-    </div>
-  </div>
-
-  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
-      </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 1</h3>
-      <p>Descripción de la noticia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum tortor a leo consectetur, ut consequat massa efficitur.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
-    </div>
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
-      </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 2</h3>
-      <p>Descripción de la noticia 2. Ut vel tellus id neque scelerisque vulputate. Fusce non dui quis magna tincidunt dignissim.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
-    </div>
-  </div>
-
-  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
-      </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 1</h3>
-      <p>Descripción de la noticia 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum tortor a leo consectetur, ut consequat massa efficitur.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
-    </div>
-    <div class="col">
-      <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
-      </div>
-      <h3 class="fs-2 text-body-emphasis">Noticia 2</h3>
-      <p>Descripción de la noticia 2. Ut vel tellus id neque scelerisque vulputate. Fusce non dui quis magna tincidunt dignissim.</p>
-      <a href="#" class="icon-link">
-        Leer más
-        <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-      </a>
-    </div>
-  </div>
-  
-</div>
+    <div class="col-2"></div>
+  </div><br>
 </div>
 
 
