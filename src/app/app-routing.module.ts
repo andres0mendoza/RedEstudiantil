@@ -6,10 +6,11 @@ import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario
 import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
-  { path:'inicio', component: InicioComponent},
-  { path:'login', component: LoginComponent},
-  { path:'registrarUsuario', component: RegistrarUsuarioComponent},
-  { path:'perfil', component: PerfilComponent}
+  { path: 'login', component: LoginComponent , title:'Inicio de sesión'},
+  { path:'inicio', component: InicioComponent, title:'Inicio'},
+  { path:'registrarUsuario', component: RegistrarUsuarioComponent, title:'Registro usuario'},
+  { path:'perfil', component: PerfilComponent, title:'Perfil'},
+  { path: '', pathMatch:'full' , redirectTo:'login'}
 ];
 
 @NgModule({
