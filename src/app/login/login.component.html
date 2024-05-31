@@ -1,32 +1,46 @@
 <div class="cotainer">
 
-  <div class="login-left">
-      <div class="login-header">
-          <h1>Login</h1>
-      </div>
-       <form>
-          <div class="login-form-content">
-              <div class="form-item">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Correo electronico">                   
-              </div>
-              <div class="form-item">
-                  <label for="password" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password" placeholder="Contraseña">       
-              </div>
-              
-              <button type="submit" class="btn btn-primary">Login</button>
-              
-          </div>
-          <div class="login-form-footer">
-            <a routerLink="/registrar-usuario" class="nav-link">¿No tienes cuenta? Registrarte</a> 
-          </div>
-      </form>
+    <div class="login-left">
+        <div class="login-header">
+            <h1>Login</h1>
+        </div>
+        <form [formGroup]="loginForm">
+            <p class="text-danger">{{ loginError }}</p>
+            <div class="login-form-content">
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Nombre usuario</label>
+                    <input formControlName="username" type="email" class="form-control" id="exampleInputEmail1" placeholder="Nombre usuario">
+                    <div class="form-item" *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+                        <div *ngIf="email.errors?.['required']">
+                            El nombre de usuario es requerido
+                        </div>
+                        <div *ngIf="email.errors?.['email']">
+                            El correo debe tener un formato valido
+                        </div>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+                    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                        <div *ngIf="password.errors?.['required']">
+                            El Password es requerido.
+                        </div>
+                    </div>
+                </div>
 
-  </div>
+                <button type="submit" (click)="login()" class="btn btn-primary">Iniciar sesión</button>
 
-  <div class="login-right">
-  
-  </div>
-         
+            </div>
+            <div class="login-form-footer">
+                <a routerLink="/registrar-usuario" class="nav-link">¿No tienes cuenta? Registrarte</a>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="login-right">
+
+    </div>
+
 </div>
